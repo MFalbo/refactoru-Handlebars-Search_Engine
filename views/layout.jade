@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset="utf-8")
+		title Handlebars Search Engine
+
+	body
+		block content
+		
+		script(id="results-template" type="text/x-handlebars-template")
+			{{#each programming}}
+				div
+					h2 Language: {{@key}}
+					p {{desc}}
+			{{#each search engines}}
+				div
+					h2 Engine: {{@key}}
+					p {{desc}}
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		script(src="/scripts/main.js")
