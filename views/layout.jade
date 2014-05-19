@@ -7,14 +7,19 @@ html(lang='en')
 	body
 		block content
 		
+		//- script(id="results-template" type="text/x-handlebars-template")
+		//- 	|{{#each programming}}
+		//- 	div
+		//- 		h2 Language: {{@key}}
+		//- 		p description: {{this}}
+		//- 	|{{#each search engines}}
+		//- 	div
+		//- 		h2 Engine: {{@key}}
+		//- 		p description: {{this}}
 		script(id="results-template" type="text/x-handlebars-template")
-			{{#each programming}}
-				div
-					h2 Language: {{@key}}
-					p {{desc}}
-			{{#each search engines}}
-				div
-					h2 Engine: {{@key}}
-					p {{desc}}
+			div
+				h2 {{language}}
+				p Description: {{desc}}
 		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js")
 		script(src="/scripts/main.js")

@@ -1,4 +1,4 @@
-{
+module.exports = {
 	"programming" : {
 		"Python" : {
 			"desc" : "a high-level general-purpose programming language."

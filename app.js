@@ -13,8 +13,13 @@ app.get('/', function(req, res) {
 });
 
 app.post('/search', function(req,res){
-	res.send(data.results);
-
+	// console.log(req.body.results);
+	if(data.programming[req.body.results]){
+		res.send(data.programming[req.body.results]);
+	}
+	else{
+		res.send(data['search engines'][req.body.results]);
+	}
 });
 
 var server = app.listen(4109, function() {
